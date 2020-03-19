@@ -1,4 +1,6 @@
-﻿namespace VaultsCoalition
+﻿using Scylla;
+
+namespace VaultsCoalition
 {
     using System.Collections;
     using System.Collections.Generic;
@@ -9,7 +11,7 @@
         // Start is called before the first frame update
         void Start()
         {
-            
+            Debug.Log(SymlinkTester.tester);
         }
 
         // Update is called once per frame
