@@ -3,10 +3,6 @@
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
 
-/Assets/Plugins/Scylla
-/Assets/Plugins/Scylla.meta
-
-
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -74,3 +70,6 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+/Assets/Plugins/Scylla
+/Assets/Plugins/Scylla.meta
