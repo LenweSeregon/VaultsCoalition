@@ -1,0 +1,3 @@
+[submodule "VaultsCoalition/Submodules/Scylla"]
+	path = VaultsCoalition/Submodules/Scylla
+	url = https://github.com/LenweSeregon/Scylla.git
