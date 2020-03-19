@@ -12,6 +12,7 @@ namespace VaultsCoalition
         void Start()
         {
             Debug.Log(SymlinkTester.tester);
+            Debug.Log(SymlinkTester2.tester2);
         }
 
         // Update is called once per frame
