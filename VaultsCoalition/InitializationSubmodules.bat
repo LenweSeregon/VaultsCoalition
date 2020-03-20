@@ -42,10 +42,24 @@ if not exist %currentFolder%\%SUBMODULE_FOLDER_NAME% mkdir %currentFolder%\%SUBM
 if not exist %currentFolder%\%SUBMODULE_FOLDER_NAME%\%SUBMODULE_SCYLLA_NAME% (
 	cd %SUBMODULE_FOLDER_NAME%
 	git submodule add --force %SUBMODULE_SCYLLA_PATH%
-	git submodule update --init --recursive
+	
 	cd ..
 )
 @echo == Adding %SUBMODULE_SCYLLA_NAME% submodule if not existing -- DONE
+@echo.
+
+
+:: Initializing Scylla submodule if Scylla Submodule folder is empty
+@echo == Initializing %SUBMODULE_SCYLLA_NAME% submodule if folder is empty -- START
+set isEmpty=true
+for /F %%i in ('dir /b "%currentFolder%\%SUBMODULE_FOLDER_NAME%\%SUBMODULE_SCYLLA_NAME%\*.*"') do (
+   set isEmpty=false
+)
+if %isEmpty% == true (
+	@echo ==== %SUBMODULE_SCYLLA_NAME% was empty - Initializing it
+	git submodule update --init --recursive
+)
+@echo == Initializing %SUBMODULE_SCYLLA_NAME% submodule if folder is empty -- DONE
 @echo.
 
 :: Adding Symlink Scylla to Plugin
