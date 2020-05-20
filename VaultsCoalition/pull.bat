@@ -6,7 +6,7 @@
 @echo Pulling super project and all submodules - Start
 cd ..
 git pull
-git submodule update --recursive --remote
+git submodule update --recursive --remote --merge
 @echo Pulling super project and all submodules - Done
 
 pause > nul
